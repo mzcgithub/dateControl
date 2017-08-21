@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="./daywork.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="./lib/bootstrap/js/bootstrap.js"></script>
+    <script src="./lib/layer/layer.js"></script>
+
+</head>
+
+<body>
+    <div class="daywork-conter " data-model="month">
+        <div>
+            <div class="right-btn ">
+                <button class="btn btn-default btn-xs today-btn" onclick="dayWorkFuntion.gotoToday()">今天</button>
+                <div class="btn-group">
+
+                    <button class="btn btn-default btn-xs" data-month-flag onclick="dayWorkFuntion.changeWeekOrMonth('month')">月
+                </button>
+                    <button class="btn btn-default btn-xs" data-week-flag onclick="dayWorkFuntion.changeWeekOrMonth('week')">周
+                </button>
+                </div>
+
+            </div>
+            <span class="month">
+                 <strong class="title">日程安排</strong>
+            </span>
+            <span class="month-info text-center">
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeMonth(-1)">
+                    <i class="glyphicon glyphicon-triangle-left"></i>
+                </button>
+                <b data-month-head>2017年8月</b>
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeMonth(1)">
+                    <i class="glyphicon glyphicon-triangle-right"></i>
+                </button>
+            </span>
+
+        </div>
+        <div class="week-info">
+            <div class="left-btn">
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeMonth(-1)">
+                    <i class="glyphicon  glyphicon-backward"></i>
+                </button>
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeWeek(-1)">
+                    <i class="glyphicon  glyphicon-triangle-left"></i>
+                </button>
+            </div>
+            <div class="right-btn">
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeWeek(1)">
+                  <i class="glyphicon glyphicon-triangle-right"></i>
+                </button>
+                <button class="btn btn-link btn-xs" onclick="dayWorkFuntion.changeMonth(1)">
+                    <i class="glyphicon glyphicon glyphicon-forward"></i>
+                </button>
+            </div>
+
+
+            <b data-week-head>2017年8月1日 ~ 2017年8月7日</b>
+        </div>
+        <div>
+            <table class="table text-center ">
+                <thead>
+                    <tr>
+                        <th>日</th>
+                        <th>一</th>
+                        <th>二</th>
+                        <th>三</th>
+                        <th>四</th>
+                        <th>五</th>
+                        <th>六</th>
+                    </tr>
+                </thead>
+                <tbody onclick="dayWorkFuntion.selectDay(event)">
+                    <tr>
+                        <td>
+                            <div>30</div>
+                        </td>
+                        <td>
+                            <div>31</div>
+                        </td>
+                        <td>
+                            <div>1</div>
+                        </td>
+                        <td>
+                            <div>2</div>
+                        </td>
+                        <td>
+                            <div>3</div>
+                        </td>
+                        <td>
+                            <div>4</div>
+                        </td>
+                        <td>
+                            <div>5</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>6</div>
+                        </td>
+                        <td>
+                            <div>7</div>
+                        </td>
+                        <td>
+                            <div>8</div>
+                        </td>
+                        <td>
+                            <div>9</div>
+                        </td>
+                        <td>
+                            <div>10</div>
+                        </td>
+                        <td>
+                            <div>11</div>
+                        </td>
+                        <td>
+                            <div>12</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>13</div>
+                        </td>
+                        <td>
+                            <div>14</div>
+                        </td>
+                        <td>
+                            <div>15</div>
+                        </td>
+                        <td>
+                            <div>16</div>
+                        </td>
+                        <td>
+                            <div>17</div>
+                        </td>
+                        <td>
+                            <div>18</div>
+                        </td>
+                        <td>
+                            <div>19</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>20</div>
+                        </td>
+                        <td>
+                            <div>21</div>
+                        </td>
+                        <td>
+                            <div>22</div>
+                        </td>
+                        <td>
+                            <div>23</div>
+                        </td>
+                        <td>
+                            <div>24</div>
+                        </td>
+                        <td>
+                            <div>25</div>
+                        </td>
+                        <td>
+                            <div>26</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>27</div>
+                        </td>
+                        <td>
+                            <div>28</div>
+                        </td>
+                        <td>
+                            <div>29</div>
+                        </td>
+                        <td>
+                            <div>30</div>
+                        </td>
+                        <td>
+                            <div>31</div>
+                        </td>
+                        <td>
+                            <div>1</div>
+                        </td>
+                        <td>
+                            <div>2</div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>3</div>
+                        </td>
+                        <td>
+                            <div>4</div>
+                        </td>
+                        <td>
+                            <div>5</div>
+                        </td>
+                        <td>
+                            <div>6</div>
+                        </td>
+                        <td>
+                            <div>7</div>
+                        </td>
+                        <td>
+                            <div>8</div>
+                        </td>
+                        <td>
+                            <div>9</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="height: calc(100% - 400px);overflow-y: auto; margin-top: 10px">
+
+            <div class="work-heard">
+                <button class="right-btn btn btn-link btn-xs" onclick="dayWorkFuntion.addDayWork()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                </button>
+                <div data-day-head>日程列表</div>
+            </div>
+            <ul class="work-list">
+                <div class="text-center" style="color:#A9A9A9 ;margin-top: 50px">
+                    <div><i class="glyphicon glyphicon-time" style="font-size: 70px"></i></div>
+                    <div>这一天没有安排哦^_^</div>
+                </div>
+
+            </ul>
+
+        </div>
+
+    </div>
+    <script src="./daywork.js"></script>
+</body>
+
+</html>

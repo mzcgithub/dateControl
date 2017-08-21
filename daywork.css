@@ -1,0 +1,177 @@
+/*body{text-align:center}*/
+
+body {
+    font-family:  "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;
+}
+
+.daywork-conter {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 50%;
+    margin-left: -200px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+    border: 1px solid #e4e4e4;
+    width: 400px;
+
+    padding: 20px;
+
+}
+
+.daywork-conter [role="button"] {
+    color: #F17070;
+    cursor: pointer;
+}
+
+.daywork-conter > div {
+    padding: 10px;
+    position: relative;
+
+}
+
+.daywork-conter > div:not(:last-child) {
+    border-bottom: 1px solid #e4e4e4;
+}
+
+.daywork-conter .icon-left {
+    margin-right: 5px;
+}
+
+.daywork-conter .left-btn {
+    float: left;
+}
+
+.daywork-conter .right-btn {
+    float: right;
+}
+
+.daywork-conter table > tbody div {
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.daywork-conter table > tbody div.today {
+    background-color: #F17070;
+    color: white;
+}
+
+.daywork-conter table > tbody div.had {
+    border: 1px solid #F17070;
+    line-height: 28px;
+}
+
+.daywork-conter table > tbody div.selected {
+    border: 3px solid #F17070;
+    line-height: 24px;
+}
+
+.daywork-conter table > tbody div:hover {
+    line-height: 21px;
+    color: #F17070;
+
+}
+
+.daywork-conter[data-model='month'] table > tbody div.no-this-month {
+    color: #A9A9A9;
+}
+
+.daywork-conter table > thead th {
+    text-align: center;
+
+}
+
+.daywork-conter .today-btn {
+    /*margin-right: 10px;*/
+
+}
+
+.daywork-conter .work-list {
+    margin: 20px 0;
+    list-style: none;
+    padding: 0;
+
+}
+
+.daywork-conter .work-list > li {
+    position: relative;
+    padding: 20px 0 20px 30px;
+
+}
+
+.daywork-conter .work-list > li > div {
+
+    padding: 3px 0;
+}
+
+.daywork-conter .work-list > li:before {
+    content: '';
+    height: 100%;
+    border: 1px #e4e4e4 solid;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+.daywork-conter .work-list > li:hover:before {
+    border-color:  #F17070 ;
+}
+
+.daywork-conter .work-list > li:after {
+    content: '';
+    height: 15px;
+    width: 15px;
+    display: block;
+    position: absolute;
+    top: 24.5px;
+    left: -7.5px;
+    border-radius: 50%;
+    background-color: #F17070;
+}
+
+.daywork-conter .mes {
+    color: #A9A9A9;
+}
+
+.daywork-conter .week-info {
+    text-align: center;
+}
+
+.daywork-conter[data-model='week'] > .week-info {
+    display: block;
+}
+
+.daywork-conter[data-model='month'] > .week-info {
+    display: none;
+}
+
+.daywork-conter[data-model='week'] .month-info {
+    display: none;
+}
+
+.daywork-conter[data-model='month'] .month-info {
+    display: inline-block;
+    width: 180px;
+}
+
+.daywork-conter .text-center td {
+    border: 0;
+}
+
+.daywork-conter[data-model='week'] table > tbody > tr {
+    display: none;
+}
+
+.daywork-conter[data-model='week'] table > tbody > tr.picking {
+    display: table-row;
+}
+
+.daywork-conter[data-model='week'] .table > thead > tr > th {
+    border-bottom-width: 0px;
+}
